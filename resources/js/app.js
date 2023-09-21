@@ -1,6 +1,15 @@
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import MainLayout from '@/Layouts/MainLayout.vue'
+import { InertiaProgress } from '@inertiajs/progress'
+import '../css/app.css'
+
+InertiaProgress.init({
+  delay:0,
+  color: '#29d',
+  includeCSS: true,
+  showSpinner: true
+})
 
 createInertiaApp({
   resolve: async(name) => {
